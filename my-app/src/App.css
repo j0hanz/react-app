@@ -1,16 +1,17 @@
+.text-light {
+  color: #ffffff !important;
+}
+
+.text-dark {
+  color: #000000 !important;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon-poo {
+  color: #995200;
 }
 
 .App-header {
@@ -24,15 +25,24 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode .App-header {
+  background-color: #1c1c1c;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.dark-mode .navbar-light .navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-mode .btn-click {
+  background-color: #282c34;
+  color: white;
 }
