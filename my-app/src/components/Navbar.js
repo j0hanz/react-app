@@ -45,6 +45,9 @@ function MyNav({ toggleDarkMode, darkMode }) {
           <Nav.Link as={NavLink} to="/tracker">
             Tracker
           </Nav.Link>
+          <Nav.Link as={NavLink} to="/search">
+            Search
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

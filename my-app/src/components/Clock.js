@@ -25,7 +25,7 @@ class Clock extends React.Component {
     console.log('render');
     const { date } = this.state;
     return (
-      <div className="display-2">
+      <div className="display-4">
         <FontAwesomeIcon className="fa-lg mb-3" icon={faClock} />
         <hr />
         <h2 className="badge rounded-pill text-bg-dark p-3">

@@ -9,6 +9,7 @@ import Clock from './components/Clock';
 import LifeCyclesCDM from './components/LifeCyclesCDM';
 import LifeCyclesCDU from './components/LifeCyclesCDU';
 import LifeCyclesCWU from './components/LifeCyclesCWU';
+import { SearchBar3 } from './components/SearchBar3';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -40,6 +41,7 @@ function App() {
             <Route path="/cycle" element={<LifeCyclesCDM />} />
             <Route path="/update" element={<LifeCyclesCDU />} />
             <Route path="/tracker" element={<LifeCyclesCWU />} />
+            <Route path="/search" element={<SearchBar3 />} />
           </Routes>
         </header>
       </div>
