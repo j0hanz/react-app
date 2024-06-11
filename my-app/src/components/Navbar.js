@@ -1,6 +1,8 @@
-// src/components/Navbar.js
 import React from 'react';
-import { Navbar, Nav, Container, Form } from 'react-bootstrap';
+import { Navbar, Nav, Form } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function MyNav({ toggleDarkMode, darkMode }) {
   return (
@@ -10,23 +12,35 @@ function MyNav({ toggleDarkMode, darkMode }) {
       expand="lg"
       className="px-5"
     >
-      <Container>
-        <Navbar.Brand href="Home">Home</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="Home">About</Nav.Link>
-          </Nav>
-          <Form.Check
-            type="switch"
-            id="dark-mode-switch"
-            label="Dark Mode"
-            checked={darkMode}
-            onChange={toggleDarkMode}
-            className={darkMode ? 'text-light' : 'text-dark'}
-          />
-        </Navbar.Collapse>
-      </Container>
+      <Navbar.Brand as={NavLink} to="/">
+        <span className="me-3">
+          <FontAwesomeIcon className="fa-lg" icon={faHouse} />
+        </span>
+      </Navbar.Brand>
+      <div className="mt-1">
+        <Form.Check
+          type="switch"
+          id="dark-mode-switch"
+          label={<FontAwesomeIcon icon={faMoon} />}
+          checked={darkMode}
+          onChange={toggleDarkMode}
+          className={darkMode ? 'text-light' : 'text-dark'}
+        />
+      </div>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-5">
+          <Nav.Link as={NavLink} to="/clock">
+            Clock
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/counter">
+            Counter
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/cycle">
+            Loading Demo
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 }

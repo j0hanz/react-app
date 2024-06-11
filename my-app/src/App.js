@@ -1,10 +1,12 @@
-// src/App.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Counter from './components/State';
 import Greeting from './components/Greeting';
 import MyNav from './components/Navbar';
+import Clock from './components/Clock';
+import LifeCyclesCDM from './components/LifeCyclesCDM';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,13 +27,19 @@ function App() {
   };
 
   return (
-    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
-      <MyNav toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <header className="App-header">
-        <Greeting name="Linus" />
-        <Counter />
-      </header>
-    </div>
+    <Router>
+      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+        <MyNav toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+        <header className="App-header">
+          <Routes>
+            <Route path="/" element={<Greeting name="Linus" />} />
+            <Route path="/clock" element={<Clock />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/cycle" element={<LifeCyclesCDM />} />
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
