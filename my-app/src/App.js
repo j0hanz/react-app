@@ -7,6 +7,8 @@ import Greeting from './components/Greeting';
 import MyNav from './components/Navbar';
 import Clock from './components/Clock';
 import LifeCyclesCDM from './components/LifeCyclesCDM';
+import LifeCyclesCDU from './components/LifeCyclesCDU';
+import LifeCyclesCWU from './components/LifeCyclesCWU';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -36,6 +38,8 @@ function App() {
             <Route path="/clock" element={<Clock />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/cycle" element={<LifeCyclesCDM />} />
+            <Route path="/update" element={<LifeCyclesCDU />} />
+            <Route path="/tracker" element={<LifeCyclesCWU />} />
           </Routes>
         </header>
       </div>

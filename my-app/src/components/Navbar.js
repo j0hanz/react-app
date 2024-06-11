@@ -39,6 +39,12 @@ function MyNav({ toggleDarkMode, darkMode }) {
           <Nav.Link as={NavLink} to="/cycle">
             Loading Demo
           </Nav.Link>
+          <Nav.Link as={NavLink} to="/update">
+            Update
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/tracker">
+            Tracker
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

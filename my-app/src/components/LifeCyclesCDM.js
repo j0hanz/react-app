@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import LifeCyclesCDMChild from './LifeCyclesCDMChild';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 
 function BorderExample() {
   return <Spinner animation="border" />;
-}
-
-function BorderNextSpin() {
-  return <Spinner animation="grow" variant="secondary" />;
 }
 
 export class LifeCyclesCDM extends Component {
@@ -43,10 +38,8 @@ export class LifeCyclesCDM extends Component {
       <div>
         {this.state.data === 'loading' ? (
           <div>
+            <p className="h1 mt-3 mb-3">Loading</p>
             <BorderExample />
-            <p className="h1 mt-3 mb-5">Loading...</p>
-            <BorderNextSpin />
-            <LifeCyclesCDMChild />
           </div>
         ) : (
           <h1>
