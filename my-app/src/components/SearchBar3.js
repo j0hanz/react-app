@@ -24,7 +24,10 @@ export class SearchBar3 extends Component {
       <div>
         <h1 className="my-5 badge text-bg-warning">Name Search</h1>
         <p className="h5 text-white-50 mb-3">
-          matching names found: {this.state.names.length}
+          matching names found:{' '}
+          <span className="badge text-bg-primary">
+            {this.state.names.length}
+          </span>
         </p>
         <form>
           <input
