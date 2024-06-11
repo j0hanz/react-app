@@ -46,6 +46,7 @@ export class SearchBar3 extends Component {
             );
           })}
         </div>
+        <hr />
       </div>
     );
   }
